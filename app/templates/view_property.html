@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+<!-- -->
+{% block main %}
+<div class="property-wrapper">
+  <div class="property-container">
+    <img
+      class="property-img"
+      src="{{ photo_url }}"
+      alt="property_img"
+    />
+    <div class="property-body">
+      <h2>{{prop.title}}</h2>
+      <!-- -->
+      <p>{{prop.description}}</p>
+      <div class="bubbles">
+        <!-- -->
+        <div class="prop-type bubble">
+          {{prop.property_type.capitalize()}}
+        </div>
+        <div class="prop-price bubble">${{prop.price}}</div>
+      </div>
+      <!-- -->
+      <div class="num_bedrooms">
+        {{prop.num_bedrooms}} Bedrooms
+        <!-- -->
+        {{prop.num_bathrooms}} Bathrooms
+      </div>
+      <!-- -->
+      <div class="location">{{prop.location}}</div>
+      <!-- -->
+      <button class="email-btn">Email Realtor</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
